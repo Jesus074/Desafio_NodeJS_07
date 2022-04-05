@@ -80,6 +80,6 @@ app.listen(PORT, async () => {
 	const oldNome = await question('Digite o nome do aluno que deseja atualizar: ')
 	const newNome = await question('Digite o novo nome do aluno: ')
 	let updateNome = await client.query(`UPDATE nome_alunos SET nome = '${newNome}' WHERE nome = '${oldNome}'`)
-	console.log(`Inserted ${updateNome.rowCount} row`)
+	console.log(`Inserted ${updateNome.rowCount} linha`)
 	await client.end()
 });
